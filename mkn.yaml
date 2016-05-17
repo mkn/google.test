@@ -1,0 +1,22 @@
+
+
+name: google.test
+version: master
+
+parent: gtest
+
+profile:
+  - name: cmn
+    lang: cpp
+    install: lib
+
+  - name: gtest
+    parent: cmn
+    inc: g/googletest g/googletest/include
+    src: g/googletest/src/gtest-all.cc
+
+  - name: gmock
+    parent: cmn
+    inc: g/googlemock g/googlemock/include
+    src: g/googlemock/src/gmock-all.cc
+    self: gtest
