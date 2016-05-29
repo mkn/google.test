@@ -3,24 +3,12 @@
 name: google.test
 version: master
 
-parent: gtest
+inc: |
+    google/test, 0
+    google/test/include
+    google/mock, 0
+    google/mock/include
+src: google/test/src/gtest-all.cc
+     google/mock/src/gmock-all.cc
 
-profile:
-  - name: cmn
-    lang: cpp
-    install: lib
-
-  - name: gtest
-    parent: cmn
-    inc: |
-        g/googletest, 0
-        g/googletest/include
-    src: g/googletest/src/gtest-all.cc
-
-  - name: gmock
-    parent: cmn
-    inc: | 
-        g/googlemock, 0
-        g/googlemock/include
-    src: g/googlemock/src/gmock-all.cc
-    self: gtest
+lang: cpp
