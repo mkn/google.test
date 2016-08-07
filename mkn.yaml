@@ -10,5 +10,6 @@ inc: |
     google/mock/include
 src: google/test/src/gtest-all.cc
      google/mock/src/gmock-all.cc
-
+if_arg:
+    win_shared: -DGTEST_CREATE_SHARED_LIBRARY=1
 lang: cpp
