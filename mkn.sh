@@ -2,7 +2,7 @@
 
 rm -rf g google
 
-git clone https://github.com/google/googletest -b master g --recursive
+git clone --depth 1 https://github.com/google/googletest -b master g --recursive
 
 mkdir -p google/test
 mkdir -p google/mock
