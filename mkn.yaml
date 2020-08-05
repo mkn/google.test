@@ -4,12 +4,12 @@ name: google.test
 version: master
 
 inc: |
-    google/test, 0
-    google/test/include
-    google/mock, 0
-    google/mock/include
-src: google/test/src/gtest-all.cc
-     google/mock/src/gmock-all.cc
+    g/googletest, 0
+    g/googletest/include
+    g/googlemock, 0
+    g/googlemock/include
+src: g/googletest/src/gtest-all.cc
+     g/googlemock/src/gmock-all.cc
 if_arg:
     win_shared: -DGTEST_CREATE_SHARED_LIBRARY=1
 lang: cpp
